@@ -152,6 +152,65 @@ select:-webkit-autofill:focus {
   line-height: normal;
 }
 
+.pricing-switch {
+  margin-bottom: 64px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch-label {
+  font-size: 15px;
+  line-height: 28px;
+  color: rgba(110, 114, 142 ,0.5);
+  cursor: pointer;
+}
+
+.switch-label:hover {
+  color: #6e728e;
+}
+
+.switch-control {
+  position: relative;
+  width: 56px;
+  height: 32px;
+  padding: 4px;
+  margin-left: 24px;
+  margin-right: 24px;
+  border-radius: 16px;
+  background-color: #696edd;
+  background-image: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+}
+
+.switch-cirle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: margin 0.3s ease;
+}
+
+.switch-control-annual,
+.switch-control-monthly {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.switch-input-annual:checked ~ .switch-control .switch-control-monthly,
+.switch-input-mothly:checked ~ .switch-control .switch-control-annual {
+  z-index: 5;
+}
+
+.switch-input-mothly:checked ~ .switch-control .switch-cirle {
+  margin-left: 24px;
+}
+
 .pricing {
   width: 100%;
 }
